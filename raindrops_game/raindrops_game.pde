@@ -1,5 +1,7 @@
-Rain[] drops = new Rain[100];
+Rain[] drops = new Rain[50];
 Catcher c;
+StartScreen s;
+boolean start;
 
 void setup() {
   size(500, 500);
@@ -7,14 +9,17 @@ void setup() {
   for (int i = 0; i < drops.length; i++) {
     drops[i] = new Rain();
   }
+  start = false;
 }
 
 void draw() {
   background(0, 49, 3);
-  c.display();
-  for (int i = 0; i < drops.length; i++) {
-    drops[i].display();
-    drops[i].drop();
+  if s.display = true {
+    c.display();
+    for (int i = 0; i < drops.length; i++) {
+      drops[i].display();
+      drops[i].drop();
+    }
   }
 }
 
