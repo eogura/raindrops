@@ -1,7 +1,6 @@
 Rain[] drops = new Rain[100];
 Catcher c;
 
-
 void setup() {
   size(500, 500);
   c = new Catcher();
