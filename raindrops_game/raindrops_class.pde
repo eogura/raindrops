@@ -6,7 +6,11 @@ class Rain {
   Rain() {
     loc = new PVector(random(width), random(height));
     vel = new PVector(0, 2);
+<<<<<<< HEAD
     d = 5;
+=======
+    d = 3;
+>>>>>>> Added Timer
   }
 
   void display() {
