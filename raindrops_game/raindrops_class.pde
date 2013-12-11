@@ -10,7 +10,7 @@ class Rain {
   Rain() {
     loc = new PVector(random(width), random(height));
     vel = new PVector(0, 2);
-    d = 5;
+    d = 10;
     x = 250;
     y = 250;
     s = 100;
@@ -20,7 +20,7 @@ class Rain {
   void display() {
     noStroke();
     colorMode(HSB, 360, 100, 100);
-    fill(random(50, 255), random(255), random(255));
+    fill(random(255), random(255), random(255));
     ellipse(loc.x, loc.y, d, d);
   }
   void drop() {
@@ -33,7 +33,9 @@ class Rain {
     }
     textAlign(CENTER);
     textSize(20);
-    text(millis(), 460, 25);
+    fill(360);
+    text("time:", 400, 25);
+    text(millis()/1000, 460, 25);
     if (millis() - oldTime >= 3000) {
       oldTime = millis();
     }
