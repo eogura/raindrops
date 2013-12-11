@@ -22,6 +22,7 @@ void draw() {
       drops[i].display();
       drops[i].drop();
     }
+    if (
   }
 }
 void mousePressed() {
