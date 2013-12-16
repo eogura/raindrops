@@ -3,6 +3,7 @@ Catcher c;
 StartScreen s;
 int score;
 boolean start;
+boolean end;
 PImage CAT;
 
 void setup() {
@@ -14,7 +15,8 @@ void setup() {
   for (int i = 0; i < drops.length; i++) {
     drops[i] = new Rain();
   }
-  boolean start = false;
+  start = false;
+  end = false;
 }
 
 void draw() {
@@ -38,11 +40,17 @@ void draw() {
       drops[i].catchDrop(c);
     }
   }
+  if (millis() >= 60000) { 
+    end == true; 
+    background(0, 0, 0, 90);
+  }
 }
 
 void mousePressed() {
   if (275 >= mouseX && mouseX>= 225 && 265>= mouseY && mouseY >= 235) {
     start=true;
   }
-}
+  if (275 >= mouseX && mouseX>= 225 && 330>= mouseY && mouseY >= 300) {
+    start=true;
+  }
 
