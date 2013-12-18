@@ -27,4 +27,3 @@ class StartScreen {
     text("Raindrops Game", 250, 100, 50);
   }
 }
-

@@ -22,7 +22,7 @@ class Rain {
     if (millis() >= 60000) {
       loc.y = 0;
       loc.x = 0;
-      text("Final Score:"+score, width/2, height/2);
+      //text("Final Score:"+score, width/2, height/2);
       noStroke();
     }
   }

@@ -41,7 +41,7 @@ void draw() {
     }
   }
   if (millis() >= 60000) { 
-    end == true; 
+    end = true; 
     background(0, 0, 0, 90);
   }
 }
@@ -53,4 +53,5 @@ void mousePressed() {
   if (275 >= mouseX && mouseX>= 225 && 330>= mouseY && mouseY >= 300) {
     start=true;
   }
+}
 
