@@ -14,7 +14,7 @@ class EndScreen {
     textSize(20);
     textAlign(CENTER);
     fill(35, 245, 60);
-    text("Good Job", 250, 300);
+    text("Congrats", 250, 300);
   }
 }
 
