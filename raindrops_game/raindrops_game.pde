@@ -5,6 +5,9 @@ int score;
 boolean start;
 boolean end;
 PImage CAT;
+float currentTime;
+float oldTime;
+float timeChange;
 
 void setup() {
   size(500, 500);
@@ -17,6 +20,9 @@ void setup() {
   }
   start = false;
   end = false;
+  currentTime = 0;
+  oldTime = 0;
+  timeChange = 0;
 }
 
 void draw() {
@@ -41,17 +47,16 @@ void draw() {
     }
   }
   if (millis() >= 60000) { 
-    end = true; 
-    background(0, 0, 0, 90);
+    timeChange = currentTime - oldTime;
   }
 }
 
 void mousePressed() {
   if (275 >= mouseX && mouseX>= 225 && 265>= mouseY && mouseY >= 235) {
-    start=true;
+    start=!start;
   }
   if (275 >= mouseX && mouseX>= 225 && 330>= mouseY && mouseY >= 300) {
-    start=true;
+    end=!end;
   }
 }
 

@@ -9,6 +9,7 @@ class EndScreen {
   }
 
   void display() {
+    background(0, 38, 11, 50);
     fill(245, 35, 224);
     rect(225, 300, 50, 30);
     textSize(20);
