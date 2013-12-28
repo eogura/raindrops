@@ -5,9 +5,6 @@ int score;
 boolean start;
 boolean end;
 PImage CAT;
-float currentTime;
-float oldTime;
-float timeChange;
 
 void setup() {
   size(500, 500);
@@ -20,9 +17,6 @@ void setup() {
   }
   start = false;
   end = false;
-  currentTime = 0;
-  oldTime = 0;
-  timeChange = 0;
 }
 
 void draw() {
@@ -45,9 +39,6 @@ void draw() {
       drops[i].drop();
       drops[i].catchDrop(c);
     }
-  }
-  if (millis() >= 60000) { 
-    timeChange = currentTime - oldTime;
   }
 }
 

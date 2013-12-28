@@ -6,6 +6,9 @@ class Rain {
   int d;
   int x;
   int y;
+  float currentTime;
+  float oldTime;
+  float timeChange;
 
   Rain() {
     loc = new PVector(random(width), random(height));
@@ -14,6 +17,9 @@ class Rain {
     topspeed = 20; 
     d = 10;
     x = 250;
+    currentTime = 0;
+    oldTime = 0;
+    timeChange = 0;
   }
   void display() {
     colorMode(HSB, 360, 100, 100);
@@ -24,6 +30,10 @@ class Rain {
       loc.x = 0;
       //text("Final Score:"+score, width/2, height/2);
       noStroke();
+    }
+
+    if (millis() >= 60000) { 
+      timeChange = currentTime - oldTime;
     }
   }
   void drop() {
