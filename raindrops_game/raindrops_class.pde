@@ -10,7 +10,7 @@ class Rain {
   Rain() {
     loc = new PVector(random(width), random(height));
     vel = new PVector(0, 2);
-    acc = new PVector(-.0001, 0.00001);
+    acc = new PVector(-.0001, 0.0001);
     topspeed = 20; 
     d = 10;
     x = 250;
@@ -44,11 +44,15 @@ class Rain {
       loc.x = width + d/2;
     }
   }
+  void newLoc() {
+    loc.set(random(width), loc.y);
+  }
   void catchDrop(Catcher c) {
     if (loc.dist(c.loc) < d/2 + c.d/2) {
       println("touched");
       loc.y = height + d/2;
       score++;
+      newLoc();
     }
   }
 }
