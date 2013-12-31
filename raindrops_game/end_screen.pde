@@ -7,15 +7,19 @@ class EndScreen {
     int rects = 10;
     float rectWidth = width/rects;
   }
-
   void display() {
-    background(0, 38, 11, 50);
-    fill(245, 35, 224);
-    rect(225, 300, 50, 30);
-    textSize(20);
+    background(288, 74, 80);
+    noStroke();
+    fill(179, 87, 93);
+    rect(195, 300, 110, 30);
+    fill(179, 85, 8);
     textAlign(CENTER);
-    fill(35, 245, 60);
-    text("Congrats", 250, 300);
+    text("play again?", 250, 320);
+    textSize(20);
+    fill(60, 87, 94);
+    text("Game Over", 250, 175);
+    text("Final Score:"+score, 250, 200);
+    //displays final score on end screen
   }
 }
 
