@@ -14,17 +14,19 @@ class StartScreen {
     strokeWeight(4);
     for (int i= 0; i < width; i += 30) {
       line(i, 0, i, height);
-      stroke(random(255), random(255), random(255));
+      //multiply lines on display; forloop
+      stroke(random(360), random(360), random(360));
     }
     fill(245, 35, 224);
+    noStroke();
     rect(225, 235, 50, 30);
     textSize(20);
     textAlign(CENTER);
     fill(35, 245, 60);
     text("start", 250, 255);
     textSize(50);
-    fill(random(255), random(255), random(255));
-    text("Raindrops Game", 250, 100, 50);
+    fill(61, 57, 96);
+    text("YarnBall Game", 250, 100, 50);
   }
 }
 
